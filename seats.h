@@ -9,6 +9,8 @@
 #ifndef seats_h
 #define seats_h
 
+#include <iostream>
+
 using namespace std;
 
 class Airplane
@@ -84,12 +86,10 @@ bool Airplane::istheplanefull()
         for(unsigned int j = 0; j <2; j++)
         {
             if(p[i][j] == 0)
-            {count ++;}
+            {return false;}
         }
     }
-    if(count >0)
-        {return false;}
-    else if(count == 0)
+    if(count == 0)
         {return true;}
     else
         {return false;}
